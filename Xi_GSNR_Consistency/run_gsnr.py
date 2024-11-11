@@ -152,7 +152,7 @@ for i, (uid, network) in enumerate(searchspace):
     grad_dict= {}
     
     
-    if args.nasspace == 'nasbench201':
+    if args.nasspace == 'nasbench201' or 'nds' in args.nasspace:
         for j in range(args.batch_numbers):
             data_iterator = iter(train_loader)
             x, target = next(data_iterator)
